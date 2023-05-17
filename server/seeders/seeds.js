@@ -1,31 +1,41 @@
-// const faker = require('faker');
-const userSeeds = require('./userSeed.json');
-// const thoughtSeeds = require('./thoughtSeed.json');
+const { faker }= require('@faker-js/faker');
 const db = require('../config/connection');
-const { User } = require('../models');
+const { Message, Event, User } = require('../models');
 
 db.once('open', async () => {
-  try {
-    // await Thought.deleteMany({});
+    await Message.deleteMany({});
+    await Event.deleteMany({});
     await User.deleteMany({});
 
-    await User.create(userSeeds);
+    const userData = {
+        username: 'testAdmin',
+        email: 'testAdmin@test.com',
+        password: 'bestBakery'
+    };
 
-    // for (let i = 0; i < thoughtSeeds.length; i++) {
-    //   const { _id, thoughtAuthor } = await Thought.create(thoughtSeeds[i]);
-    //   const user = await User.findOneAndUpdate(
-    //     { username: thoughtAuthor },
-    //     {
-    //       $addToSet: {
-    //         thoughts: _id,
-    //       },
-    //     }
-    //   );
-    // }
-  } catch (err) {
-    console.error(err);
-    process.exit(1);
-  }
+    const createdUser = await User.collection.insertOne(userData);
+
+    const messageData =[];
+
+    for (let i = 0; i < 25; i++) {
+        const name = faker.name.fullName();
+        const email = faker.internet.email(name);
+        const message = faker.hacker.phrase();
+
+        messageData.push({ name, email, message});
+    }
+
+    const createdMessages = await Message.collection.insertMany(messageData);
+    const eventData =[];
+
+    for (let i = 0; i < 25; i++) {
+        const title = faker.commerce.productName();
+        const eventBody = faker.commerce.productDescription();
+
+        eventData.push({ title, eventBody });
+    }
+
+    const createdEvents = await Event.collection.insertMany(eventData);
 
   console.log('all done!');
   process.exit(0);

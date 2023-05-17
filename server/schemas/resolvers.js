@@ -1,5 +1,5 @@
 const { AuthenticationError } = require('apollo-server-express');
-const { User } = require('../models');
+const { User, Message, Event } = require('../models');
 const { signToken } = require('../utils/auth');
 
 const resolvers = {
@@ -14,13 +14,23 @@ const resolvers = {
 
             throw new AuthenticationError('Not logged in');
         },
-        user: async (parent, { username }) => {
-            return User.findOne({ username })
-              .select('-__v -password')
-          },
+        messages: async () => {
+            const messages = await Message.find().sort({ createdAt: -1});
+            return messages;
+        },
+        events: async () => {
+            const events = await Event.find().sort({ createdAt: -1});
+            return events;
+        }
     },
 
     Mutation: {
+        addUser: async (parent, args) => {
+            const user = await User.create(args);
+            const token = signToken(user);
+
+            return { token, user };
+        },
         login: async (parent, { email, password }) => {
             const user = await User.findOne({ email });
 
@@ -37,6 +47,15 @@ const resolvers = {
             const token = signToken(user);
             return { token, user };
         },
+        addMessage: async (parent, args) => {
+            const message = await Message.create(args);
+            
+            return message;
+        },
+        addEvent: async (parent, args) => {
+            const event = await Event.create(args);
+            return event;
+        }
     }
 }
 

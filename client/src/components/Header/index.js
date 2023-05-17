@@ -1,64 +1,124 @@
 import React from 'react';
 
+import Auth from '../../utils/auth';
+
 function Header(props) {
-    return (
+  const logout = (event) => {
+    event.preventDefault();
+    Auth.logout();
+  };
 
-        <header className='container'>
-            <nav className="navbar navbar-expand-lg">
-                {/* <a className="navbar-brand" href="/"></a> */}
-                {/* <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
-                    <span className="navbar-toggler-icon"></span>
-                </button> */}
-                <div className="collapse navbar-collapse" id="navbarText">
-                    <ul className="navbar-nav mr-auto">
-                        {/* home */}
-                        <li className="nav-item active">
-                            <button type='button' className='btn btn-black text-white' onClick={() => {
-                                props.setCurrentPage("About")
-                            }} >Home</button> <span className="sr-only"> </span>
-                        </li>
-                        {/* login */}
-                        <li className="nav-item active">
-                            <button type='button' className='btn btn-white text-white' onClick={() => {
-                                props.setCurrentPage('Login')
-                            }}>Login</button><span className='sr-only'></span>
+  return (
+    <header className='container'>
+      <nav className='navbar navbar-expand-lg'>
+        <div className='collapse navbar-collapse' id='navbarText'>
+          <ul className='navbar-nav mr-auto'>
+            <li className='nav-item active'>
+              <button
+                type='button'
+                className='btn btn-black text-white'
+                onClick={() => {
+                  props.setCurrentPage('About');
+                }}
+              >
+                Home
+              </button>{' '}
+              <span className='sr-only'> </span>
+            </li>
 
-                        </li>
-                        {/* baked goods */}
-                        <li className="nav-item active">
-                            <button type='button' className='btn btn-white text-white' onClick={() => {
-                                props.setCurrentPage('Baked-Goods')
-                            }}>Baked Goods</button><span className='sr-only'></span>
-                        </li>
-                        {/* newsletter */}
-                        <li className="nav-item active">
-                            <button type='button' className='btn btn-white text-white' onClick={() => {
-                                props.setCurrentPage('Newsletter')
-                            }}>Newsletter</button><span className='sr-only'></span>
-                        </li>
-                        {/* contact */}
-                        <li className="nav-item active">
-                            <button type='button' className='btn btn-white text-white' onClick={() => {
-                                props.setCurrentPage('Contact')
-                            }}>Contact</button><span className='sr-only'></span>
-                        </li>
-                    </ul>
-                    <span className="navbar-text text-white ">
+            <li className='nav-item active'>
+              <button
+                type='button'
+                className='btn btn-white text-white'
+                onClick={() => {
+                  props.setCurrentPage('Baked-Goods');
+                }}
+              >
+                Baked Goods
+              </button>
+              <span className='sr-only'></span>
+            </li>
+            <li className='nav-item active'>
+              <button
+                type='button'
+                className='btn btn-white text-white'
+                onClick={() => {
+                  props.setCurrentPage('Newsletter');
+                }}
+              >
+                Newsletter
+              </button>
+              <span className='sr-only'></span>
+            </li>
 
-                        <div className="logo-image">
-                            <img
-                                src={require(`../../assets/images/logo/logo.JPEG`)}
-                                alt='logo'
-                                className="img-fluid">
-
-                            </img>
-                        </div>
-
-                    </span>
-                </div>
-            </nav>
-        </header>
-    )
+            {Auth.loggedIn() ? (
+              <>
+                <li className='nav-item active'>
+                  <button
+                    type='button'
+                    className='btn btn-white text-white'
+                    onClick={() => {
+                      props.setCurrentPage('Messages');
+                    }}
+                  >
+                    Messages
+                  </button>
+                  <span className='sr-only'></span>
+                </li>
+                <li className='nav-item active'>
+                  <button
+                    type='button'
+                    className='btn btn-white text-white'
+                    onClick={logout}
+                  >
+                    Log Out
+                  </button>
+                  <span className='sr-only'></span>
+                </li>
+              </>
+            ) : (
+              <>
+                <li className='nav-item active'>
+                  <button
+                    type='button'
+                    className='btn btn-white text-white'
+                    onClick={() => {
+                      props.setCurrentPage('Contact');
+                    }}
+                  >
+                    Contact
+                  </button>
+                  <span className='sr-only'></span>
+                </li>
+                <li className='nav-item active'>
+                  <button
+                    type='button'
+                    className='btn btn-white text-white'
+                    onClick={() => {
+                      props.setCurrentPage('Login');
+                    }}
+                  >
+                    Login
+                  </button>
+                  <span className='sr-only'></span>
+                </li>
+              </>
+            )}
+          </ul>
+          <span className='navbar-text text-white '>
+            <div className='logo-image'>
+              <img
+                src={require(`../../assets/images/logo/logo.JPEG`)}
+                alt='logo'
+                className='img-fluid'
+              ></img>
+            </div>
+          </span>
+        </div>
+      </nav>
+    </header>
+  );
 }
 
 export default Header;
+

@@ -1,4 +1,6 @@
 import React, { useState } from 'react'
+import { ApolloProvider, ApolloClient, InMemoryCache, createHttpLink } from '@apollo/client';
+
 import Header from './components/Header';
 import About from './components/About';
 import BakedGoods from './components/Baked-Goods';
@@ -6,11 +8,11 @@ import Newsletter from './components/Newsletter';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 import Login from './components/Login';
-import { ApolloProvider, ApolloClient, InMemoryCache, createHttpLink } from '@apollo/client';
+import Messages from './components/Messages';
 
 
 const httpLink = createHttpLink({
-  uri: 'http://localhost:3001/graphql',
+  uri: '/graphql',
 });
 
 const client = new ApolloClient({
@@ -19,8 +21,8 @@ const client = new ApolloClient({
 });
 
 function App() {
-  const [currentPage, setCurrentPage] = useState()
-
+  const [currentPage, setCurrentPage] = useState("About")
+  document.title = `${currentPage} | Ever After Bakery`;  
   function pageChanger(page) {
 
     if (page === "About") {
@@ -36,9 +38,11 @@ function App() {
       return <Contact />
     }
     if (page === "Login") {
-      return <Login />
+      return <Login setCurrentPage={setCurrentPage}/>
     }
-
+    if (page==="Messages") {
+        return <Messages />
+    }
   }
 
 

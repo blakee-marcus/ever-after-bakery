@@ -1,8 +1,8 @@
-
 [![Contributors][contributors-shield]][contributors-url]
 [![Forks][forks-shield]][forks-url]
 [![Stargazers][stars-shield]][stars-url]
 [![Issues][issues-shield]][issues-url]
+[![MIT License][license-shield]][license-url]
 [![LinkedIn][linkedin-shield]][linkedin-url]
 
 
@@ -19,6 +19,7 @@
   <p align="center">
     Made in a Home Kitchen
     <br />
+    <a href="https://github.com/Azurene/ever-after-bakery"><strong>Explore the docs »</strong></a>
     <br />
     <br />
     <a href="https://ever-after-bakery.herokuapp.com/">View Demo</a>
@@ -51,6 +52,8 @@
     <li><a href="#usage">Usage</a></li>
     <li><a href="#roadmap">Roadmap</a></li>
     <li><a href="#contributing">Contributing</a></li>
+    <li><a href="#license">License</a></li>
+    <li><a href="#contact">Contact</a></li>
     <li><a href="#acknowledgments">Acknowledgments</a></li>
   </ol>
 </details>
@@ -61,14 +64,21 @@
 ## About The Project
 Create Delightful Creations, indulge in desired goodies. Leaving a Ever After Memory. No place better made then a home kitchen !
 
+<p align="right">(<a href="#top">back to top</a>)</p>
+
+
 
 ### Built With
 
+* [Node.js](https://nodejs.org/en/)
 * [GraphQL](https://graphql.org/)
 * [Mongoose](https://mongoosejs.com/)
 * [Express.js](https://expressjs.com/)
 * [React.js](https://reactjs.org/)
-* [Node.js](https://nodejs.org/en/)
+
+
+<p align="right">(<a href="#top">back to top</a>)</p>
+
 
 
 <!-- GETTING STARTED -->
@@ -94,10 +104,19 @@ Install the latest version of npm.
    ```sh
    npm install
    ```
+
+<p align="right">(<a href="#top">back to top</a>)</p>
+
+
+
 <!-- USAGE EXAMPLES -->
 ## Demo
 
 Link to [Live Version](https://ever-after-bakery.herokuapp.com/)
+
+
+<p align="right">(<a href="#top">back to top</a>)</p>
+
 
 
 <!-- ROADMAP -->
@@ -110,6 +129,9 @@ Link to [Live Version](https://ever-after-bakery.herokuapp.com/)
 - [ ] Once ordered, customers can edit current order. For example: add additional / change the date / cancel order
 
 See the [open issues](https://github.com/Azurene/ever-after-bakery/issues) for a full list of proposed features (and known issues).
+
+<p align="right">(<a href="#top">back to top</a>)</p>
+
 
 
 <!-- CONTRIBUTING -->
@@ -126,12 +148,31 @@ Don't forget to give the project a star! Thanks again!
 4. Push to the Branch (`git push origin feature/AmazingFeature`)
 5. Open a Pull Request
 
+<p align="right">(<a href="#top">back to top</a>)</p>
+
+
+
+<!-- CONTACT -->
+## Contact
+
+Jodee C
+* Email: leaning.frets.08@icloud.com
+* GitHub: https://github.com/Azurene
+
+<p align="right">(<a href="#top">back to top</a>)</p>
+
+
+
 <!-- ACKNOWLEDGMENTS -->
 ## Acknowledgments
 This was a group project and here are the links to their githubs!
 * [Krista G](https://github.com/krista20)
 * [Angel S](https://github.com/santosangel1126)
-* [Jodee C](https://github.com/Azurene)
+* [Blake M](https://github.com/blakee-marcus)
+
+<p align="right">(<a href="#top">back to top</a>)</p>
+
+
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->

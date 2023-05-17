@@ -7,7 +7,7 @@ import { LOGIN_USER } from '../../utils/mutations';
 
 import Auth from '../../utils/auth';
 
-function Login  (props) {
+function Login(props) {
   const [formState, setFormState] = useState({ email: '', password: '' });
   const [login, { error }] = useMutation(LOGIN_USER);
 
@@ -31,7 +31,7 @@ function Login  (props) {
       });
 
       Auth.login(data.login.token);
-      alert("Login successful!");
+      props.setCurrentPage("Messages");
     } catch (e) {
       console.error(e);
     }
@@ -44,31 +44,31 @@ function Login  (props) {
   };
 
   return (
-    <main className="flex-row justify-center mb-4 container">
-      <div className="col-12 col-md-6">
-        <div className="card">
-          <h4 className="card-header text-center text-bg-dark">Login</h4>
-          <div className="card-body">
+    <main className='d-flex align-items-center justify-content-center h-100 container'>
+      <div className='col-12 col-md-6'>
+        <div className='card'>
+          <h4 className='card-header text-center text-bg-dark'>Login</h4>
+          <div className='card-body'>
             <form onSubmit={handleFormSubmit}>
               <input
-                className="form-input form-control"
-                placeholder="Your email"
-                name="email"
-                type="email"
-                id="email"
+                className='form-input form-control mb-3'
+                placeholder='Your email'
+                name='email'
+                type='email'
+                id='email'
                 value={formState.email}
                 onChange={handleChange}
               />
               <input
-                className="form-input form-control"
-                placeholder="******"
-                name="password"
-                type="password"
-                id="password"
+                className='form-input form-control mb-3'
+                placeholder='******'
+                name='password'
+                type='password'
+                id='password'
                 value={formState.password}
                 onChange={handleChange}
               />
-              <button className="btn btn-danger d-block w-100" type="submit">
+              <button className='btn btn-danger w-100' type='submit'>
                 Submit
               </button>
             </form>
