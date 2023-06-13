@@ -22,7 +22,7 @@
     <a href="https://github.com/Azurene/ever-after-bakery"><strong>Explore the docs »</strong></a>
     <br />
     <br />
-    <a href="https://ever-after-bakery.herokuapp.com/">View Demo</a>
+    <a href="https://everafterbakery.herokuapp.com/">View Demo</a>
     ·
     <a href="https://github.com/Azurene/ever-after-bakery/issues">Report Bug</a>
     ·
