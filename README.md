@@ -5,102 +5,63 @@
 [![MIT License][license-shield]][license-url]
 [![LinkedIn][linkedin-shield]][linkedin-url]
 
-
-
 <!-- PROJECT LOGO -->
-<br />
-<div id=”top”  align="center">
+<div align="center">
   <a href="https://github.com/Azurene/ever-after-bakery">
-    <img src="client/src/assets/images/logo/logo.JPEG" alt="Logo" width="80" height="80">
+    <img src="client/src/assets/images/logo/logo.JPEG" alt="Ever After Bakery Logo" width="80" height="80">
   </a>
 
-<h3 align="center">Ever After Bakery</h3>
-
-  <p align="center">
-    Made in a Home Kitchen
+  <h3>Ever After Bakery</h3>
+  <p>
+    Authentic Creations from a Home Kitchen.
     <br />
-    <a href="https://github.com/Azurene/ever-after-bakery"><strong>Explore the docs »</strong></a>
+    <a href="https://github.com/Azurene/ever-after-bakery"><strong>Documentation »</strong></a>
     <br />
-    <br />
-    <a href="https://everafterbakery.herokuapp.com/">View Demo</a>
-    ·
-    <a href="https://github.com/Azurene/ever-after-bakery/issues">Report Bug</a>
-    ·
-    <a href="https://github.com/Azurene/ever-after-bakery/issues">Request Feature</a>
+    <a href="https://everafterbakery.herokuapp.com/">Live Demo</a>
+    •
+    <a href="https://github.com/Azurene/ever-after-bakery/issues">Report Bug or Request Feature</a>
   </p>
 </div>
 
-
-
 <!-- TABLE OF CONTENTS -->
-<details>
-  <summary>Table of Contents</summary>
-  <ol>
-    <li>
-      <a href="#about-the-project">About The Project</a>
-      <ul>
-        <li><a href="#built-with">Built With</a></li>
-      </ul>
-    </li>
-    <li>
-      <a href="#getting-started">Getting Started</a>
-      <ul>
-        <li><a href="#prerequisites">Prerequisites</a></li>
-        <li><a href="#installation">Installation</a></li>
-      </ul>
-    </li>
-    <li><a href="#usage">Usage</a></li>
-    <li><a href="#roadmap">Roadmap</a></li>
-    <li><a href="#contributing">Contributing</a></li>
-    <li><a href="#license">License</a></li>
-    <li><a href="#contact">Contact</a></li>
-    <li><a href="#acknowledgments">Acknowledgments</a></li>
-  </ol>
-</details>
+## Table of Contents
+- [About The Project](#about-the-project)
+  * [Technologies Used](#technologies-used)
+- [Getting Started](#getting-started)
+  * [Prerequisites](#prerequisites)
+  * [Installation](#installation)
+- [Demo](#demo)
+- [Roadmap](#roadmap)
+- [Contributing](#contributing)
+- [Contact](#contact)
+- [Acknowledgments](#acknowledgments)
 
-
-
-<!-- ABOUT THE PROJECT -->
 ## About The Project
-Create Delightful Creations, indulge in desired goodies. Leaving a Ever After Memory. No place better made then a home kitchen !
+Indulge in delightful creations, savor desired goodies, and leave with an everlasting memory. No place better than a home kitchen!
 
-<p align="right">(<a href="#top">back to top</a>)</p>
+### Technologies Used
+- [Node.js](https://nodejs.org/en/)
+- [GraphQL](https://graphql.org/)
+- [Mongoose](https://mongoosejs.com/)
+- [Express.js](https://expressjs.com/)
+- [React.js](https://reactjs.org/)
 
-
-
-### Built With
-
-* [Node.js](https://nodejs.org/en/)
-* [GraphQL](https://graphql.org/)
-* [Mongoose](https://mongoosejs.com/)
-* [Express.js](https://expressjs.com/)
-* [React.js](https://reactjs.org/)
-
-
-<p align="right">(<a href="#top">back to top</a>)</p>
-
-
-
-<!-- GETTING STARTED -->
 ## Getting Started
-
-To get a local copy up and running follow these steps.
+Follow these steps to get a local copy running.
 
 ### Prerequisites
-
-Install the latest version of npm.
-* npm
-  ```sh
-  npm install npm@latest -g
-  ```
+Ensure you have the latest version of npm installed:
+```sh
+npm install npm@latest -g
+```
 
 ### Installation
 
-1. Clone the repo
+1. Clone the repository:
    ```sh
    git clone https://github.com/Azurene/ever-after-bakery.git
    ```
-2. Install NPM packages
+2. Install required NPM packages:
    ```sh
    npm install
    ```
@@ -112,7 +73,7 @@ Install the latest version of npm.
 <!-- USAGE EXAMPLES -->
 ## Demo
 
-Link to [Live Version](https://ever-after-bakery.herokuapp.com/)
+Experience the [Live Version](https://ever-after-bakery.herokuapp.com/)
 
 
 <p align="right">(<a href="#top">back to top</a>)</p>
@@ -122,13 +83,13 @@ Link to [Live Version](https://ever-after-bakery.herokuapp.com/)
 <!-- ROADMAP -->
 ## Roadmap
 
-- [ ] Implementing/ Updating a banner showing weekly News/specials
+- [ ] Implement/Update a banner to showcase weekly news/specials.
 
-- [ ] Adding google maps Api to give updated location/directions
-- [ ] Weekly/monthly Promotions given to registered customers / refer a friend discount
-- [ ] Once ordered, customers can edit current order. For example: add additional / change the date / cancel order
+- [ ] Integrate Google Maps API for updated location and directions.
+- [ ] Offer weekly/monthly promotions to registered customers and provide refer-a-friend discounts.
+- [ ] Allow customers to edit their current orders (e.g., add items, change dates, or cancel orders).
 
-See the [open issues](https://github.com/Azurene/ever-after-bakery/issues) for a full list of proposed features (and known issues).
+Visit our [Issues page](https://github.com/Azurene/ever-after-bakery/issues) for a complete list of proposed features and known issues.
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -137,10 +98,7 @@ See the [open issues](https://github.com/Azurene/ever-after-bakery/issues) for a
 <!-- CONTRIBUTING -->
 ## Contributing
 
-Contributions are what makes the open source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
-
-If you have a suggestion that would make this better, please fork the repo and create a pull request. You can also simply open an issue with the tag "enhancement".
-Don't forget to give the project a star! Thanks again!
+We welcome contributions from the open-source community!
 
 1. Fork the Project
 2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
@@ -148,16 +106,14 @@ Don't forget to give the project a star! Thanks again!
 4. Push to the Branch (`git push origin feature/AmazingFeature`)
 5. Open a Pull Request
 
-<p align="right">(<a href="#top">back to top</a>)</p>
-
-
+Remember to star our project if you like it! Your support means a lot to us.
 
 <!-- CONTACT -->
 ## Contact
 
 Jodee C
-* Email: leaning.frets.08@icloud.com
-* GitHub: https://github.com/Azurene
+* Email: [leaning.frets.08@icloud.com](mailto:leaning.frets.08@icloud.com)
+* GitHub: [Azurene](https://github.com/Azurene)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
